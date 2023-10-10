@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platfoms",
+  "info": {
+    "singularName": "platfom",
+    "pluralName": "platfoms",
+    "displayName": "Platfom"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "supported": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "company": {
+      "type": "enumeration",
+      "enum": [
+        "Sony",
+        "Nintendo",
+        "Microsoft",
+        "SNK"
+      ]
+    },
+    "launch": {
+      "type": "date"
+    },
+    "videogames": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::videogame.videogame",
+      "mappedBy": "platfoms"
+    }
+  }
+}
