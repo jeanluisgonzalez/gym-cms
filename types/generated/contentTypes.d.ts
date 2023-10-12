@@ -682,7 +682,8 @@ export interface ApiPlatfomPlatfom extends Schema.CollectionType {
   info: {
     singularName: 'platfom';
     pluralName: 'platfoms';
-    displayName: 'Platfom';
+    displayName: 'Platform';
+    description: '';
   };
   options: {
     draftAndPublish: true;
